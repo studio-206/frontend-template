@@ -1,16 +1,5 @@
 import type { AppProps } from "next/app";
-
-import { globalCss } from "stitches.config";
-
-const globalStyles = globalCss({
-  "*": { margin: 0, padding: 0 },
-  html: {
-    boxSizing: "border-box",
-  },
-  "*, *:before, *:after": {
-    boxSizing: "inherit",
-  },
-});
+import globalStyles from "src/styles/globalStyles";
 
 function MyApp({ Component, pageProps }: AppProps) {
   globalStyles();
