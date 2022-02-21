@@ -1,9 +1,9 @@
 ## Generic Nextjs template.
 
-This includes:
-
 - Typescript
-- Stitches CSS-in-JS framework
+- Uses [husky](https://www.npmjs.com/package/husky) for easy git hooks. Runs a typescript check on pre-commit.
+  - If you need to bypass this for a WIP PR etc, run `git commit =m "your message" --no-verify`.
+- Uses [stitches](https://stitches.dev/) CSS-in-JS framework
 - Moves stuff to `./src/` directory so:
 
 ```
