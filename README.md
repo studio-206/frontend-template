@@ -44,7 +44,7 @@ interface Props {
 
 // Component
 const Button = ({ onClick }: Props) => {
-  return <StyledButton onClick={onClick}>Click Me<StyledButton>
+  return <StyledButton onClick={onClick}>Click Me</StyledButton>
 }
 
 // Styled elements
