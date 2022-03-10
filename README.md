@@ -48,7 +48,7 @@ const Button = ({ onClick }: Props) => {
 }
 
 // Styled elements
-const StyledButton = Styled("button")
+const StyledButton = styled("button")
 
 // Default Export
 export default Button
