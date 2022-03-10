@@ -17,3 +17,40 @@ Includes a basic [stitches.dev](https://stitches.dev/) setup inside [src/styles/
 ## How to use
 
 Create a new repo by hitting [use this template](https://github.com/studio-206/nextjs-typescript-stitches-template/generate)
+
+## Guidelines
+
+### Components
+
+When building a React component using stitches, we like to follow the following format:
+
+- Imports
+- Typescript Types
+- Component
+- Styled Stitches variables
+- Default export
+
+Here's an example:
+
+```ts
+// import Link from "next/link" <- Ensure node_modules are imported first
+
+import { styled } from "src/styles/stitches.config";
+
+// Typescript Types
+interface Props {
+  onClick: () => void;
+}
+
+// Component
+const Button = ({ onClick }: Props) => {
+  return <StyledButton onClick={onClick}>Click Me</StyledButton>
+}
+
+// Styled elements
+const StyledButton = styled("button")
+
+// Default Export
+export default Button
+
+ ```
