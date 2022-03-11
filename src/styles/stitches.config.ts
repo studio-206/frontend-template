@@ -18,9 +18,9 @@ export const {
     desktop: "(min-width: 1024px)",
   },
   utils: {
-    mx: (value: number) => ({ marginLeft: value, marginRight: value }),
-    my: (value: number) => ({ marginTop: value, marginBottom: value }),
-    px: (value: number) => ({ paddingLeft: value, paddingRight: value }),
-    py: (value: number) => ({ paddingTop: value, paddingBottom: value }),
+    mx: (value: number | string) => ({ marginLeft: value, marginRight: value }),
+    my: (value: number | string) => ({ marginTop: value, marginBottom: value }),
+    px: (value: number | string) => ({ paddingLeft: value, paddingRight: value }),
+    py: (value: number | string) => ({ paddingTop: value, paddingBottom: value }),
   },
 });
