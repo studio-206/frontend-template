@@ -20,6 +20,8 @@ Create a new repo by hitting [use this template](https://github.com/studio-206/n
 
 ## Guidelines
 
+We use `npm` as the package manager. No yarn.lock files allowed
+
 ### Components
 
 When building a React component using stitches, we like to follow the following format:
@@ -44,13 +46,12 @@ interface Props {
 
 // Component
 const Button = ({ onClick }: Props) => {
-  return <StyledButton onClick={onClick}>Click Me</StyledButton>
-}
+  return <StyledButton onClick={onClick}>Click Me</StyledButton>;
+};
 
 // Styled elements
-const StyledButton = styled("button")
+const StyledButton = styled("button");
 
 // Default Export
-export default Button
-
+export default Button;
 ```
