@@ -46,7 +46,7 @@ interface Props {
 
 // export component as named function
 // This ensures we are importing the same thing.
-// This is so you don't do `import whoCares from "./ReallyImportNamedFunctionThatActuallyCares"`
+// This is so you don't do `import whoCares from "./ReallyImportantNamedFunctionThatActuallyCares"`
 export const Button = ({ onClick }: Props) => {
   return <StyledButton onClick={onClick}>Click Me</StyledButton>;
 };
