@@ -28,9 +28,8 @@ When building a React component using stitches, we like to follow the following 
 
 - Imports
 - Typescript Types
-- Component
+- Named export & Component declaration
 - Styled Stitches variables
-- Default export
 
 Here's an example:
 
