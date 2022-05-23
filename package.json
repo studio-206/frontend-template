@@ -1,6 +1,6 @@
 {
   "name": "nextjs-typescript-stitches-template",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,21 +10,21 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@stitches/react": "^1.2.6",
-    "next": "12.1.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "@stitches/react": "^1.2.8",
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "@types/node": "17.0.18",
-    "@types/react": "17.0.39",
-    "@typescript-eslint/eslint-plugin": "^5.13.0",
-    "@typescript-eslint/parser": "^5.13.0",
-    "eslint": "^8.10.0",
-    "eslint-config-next": "12.1.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.3.5",
-    "typescript": "^4.6.2"
+    "@types/node": "^17.0.35",
+    "@types/react": "^18.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "eslint": "^8.16.0",
+    "eslint-config-next": "^12.1.6",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.1",
+    "typescript": "^4.6.4"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,html,css}": "eslint --fix"
