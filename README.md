@@ -7,9 +7,11 @@
 - Moves stuff to `./src/` directory so:
 
 ```
-./src/components/..
-./src/pages/..
-./src/styles/..
+├── src
+|   ├── components/
+│   ├── pages/
+│   ├── styles/
+├── package.json
 ```
 
 Includes a basic [stitches.dev](https://stitches.dev/) setup inside [src/styles/stitches.config.ts](src/styles/stitches.config.ts)
