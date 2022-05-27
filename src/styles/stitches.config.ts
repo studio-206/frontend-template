@@ -25,6 +25,30 @@ export const {
   utils: {
     mx: (value: UtilValue) => ({ marginLeft: value, marginRight: value }),
     my: (value: UtilValue) => ({ marginTop: value, marginBottom: value }),
+    mt: (value: UtilValue) => ({
+      marginTop: value,
+    }),
+    mr: (value: UtilValue) => ({
+      marginRight: value,
+    }),
+    mb: (value: UtilValue) => ({
+      marginBottom: value,
+    }),
+    ml: (value: UtilValue) => ({
+      marginLeft: value,
+    }),
+    pt: (value: UtilValue) => ({
+      paddingTop: value,
+    }),
+    pr: (value: UtilValue) => ({
+      paddingRight: value,
+    }),
+    pb: (value: UtilValue) => ({
+      paddingBottom: value,
+    }),
+    pl: (value: UtilValue) => ({
+      paddingLeft: value,
+    }),
     px: (value: UtilValue) => ({
       paddingLeft: value,
       paddingRight: value,

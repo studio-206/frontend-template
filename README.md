@@ -52,3 +52,4 @@ export const Button = ({ onClick }: Props) => {
 
 // Styled elements
 const StyledButton = styled("button");
+```
