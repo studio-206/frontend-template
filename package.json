@@ -27,7 +27,20 @@
     "prettier": "2.7.1",
     "typescript": "^4.6.4"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,html,css}": "eslint --fix"
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{html,css}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
