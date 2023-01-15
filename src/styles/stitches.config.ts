@@ -1,6 +1,7 @@
 import { createStitches } from "@stitches/react";
 
 import type * as Stitches from "@stitches/react";
+import { fuildFontSize, fuildSpacingBottom, fuildSpacingTop } from "./utils";
 
 type UtilValue = Stitches.ScaleValue<"space"> | number | string;
 
@@ -8,6 +9,7 @@ export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme
   createStitches({
     theme: {
       colors: {},
+      fontSizes: {},
       space: {},
     },
     media: {
@@ -15,6 +17,9 @@ export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme
       desktop: "(min-width: 1024px)",
     },
     utils: {
+      m: (value: UtilValue) => ({
+        margin: value,
+      }),
       mx: (value: UtilValue) => ({ marginLeft: value, marginRight: value }),
       my: (value: UtilValue) => ({ marginTop: value, marginBottom: value }),
       mt: (value: UtilValue) => ({
@@ -49,5 +54,23 @@ export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme
         paddingTop: value,
         paddingBottom: value,
       }),
+      p: (value: UtilValue) => ({
+        padding: value,
+      }),
+      fluidSpacingTop: fuildSpacingTop,
+      fluidSpacingBottom: fuildSpacingBottom,
+      userSelect: (value: Stitches.PropertyValue<"userSelect">) => ({
+        WebkitUserSelect: value,
+        userSelect: value,
+      }),
+      size: (value: Stitches.PropertyValue<"width">) => ({
+        width: value,
+        height: value,
+      }),
+      appearance: (value: Stitches.PropertyValue<"appearance">) => ({
+        WebkitAppearance: value,
+        appearance: value,
+      }),
+      fluidFontSize: fuildFontSize,
     },
   });
