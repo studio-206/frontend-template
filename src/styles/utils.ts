@@ -2,6 +2,8 @@ import type * as Stitches from "@stitches/react";
 
 import { theme } from "src/styles/stitches.config";
 
+export type UtilValue = Stitches.ScaleValue<"space"> | number | string;
+
 export const convertToRem = (fontSize?: string) => {
   if (!fontSize) return 0;
   return parseInt(fontSize.replace("px", ""), 10) / 16;
@@ -27,9 +29,9 @@ export const fluidify = (minFsRaw: string, maxFsRaw: string) => {
   };
 };
 
-export const fuildSpacing = (
-  value: [Stitches.PropertyValue<"padding">, Stitches.PropertyValue<"padding">],
-) => {
+type FluidSpaceValue = [Stitches.PropertyValue<"padding">, Stitches.PropertyValue<"padding">];
+
+export const fuildSpacing = (value: FluidSpaceValue) => {
   // Parse values
   // We check if they are theme tokens and if so get their values
   const minFsRaw =
@@ -49,25 +51,17 @@ export const fuildSpacing = (
   };
 };
 
-export const fuildSpacingTop = (
-  value: [Stitches.PropertyValue<"padding">, Stitches.PropertyValue<"padding">],
-) => {
-  const { clamp } = fuildSpacing(value);
+export function makeFluidSpacing(property: string | string[]) {
+  return function fluidSpace(value: FluidSpaceValue): Record<string, UtilValue> {
+    const { clamp } = fuildSpacing(value);
 
-  return {
-    paddingTop: clamp,
+    if (Array.isArray(property)) {
+      return Object.fromEntries(property.map(prop => [prop, clamp]));
+    }
+
+    return { [property]: clamp };
   };
-};
-
-export const fuildSpacingBottom = (
-  value: [Stitches.PropertyValue<"padding">, Stitches.PropertyValue<"padding">],
-) => {
-  const { clamp } = fuildSpacing(value);
-
-  return {
-    paddingBottom: clamp,
-  };
-};
+}
 
 export const fuildFontSize = (
   value: [Stitches.PropertyValue<"fontSize">, Stitches.PropertyValue<"fontSize">],

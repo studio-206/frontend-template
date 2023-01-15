@@ -1,9 +1,7 @@
 import { createStitches } from "@stitches/react";
 
 import type * as Stitches from "@stitches/react";
-import { fuildFontSize, fuildSpacingBottom, fuildSpacingTop } from "./utils";
-
-type UtilValue = Stitches.ScaleValue<"space"> | number | string;
+import { fuildFontSize, makeFluidSpacing, UtilValue } from "./utils";
 
 export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme, config } =
   createStitches({
@@ -57,8 +55,13 @@ export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme
       p: (value: UtilValue) => ({
         padding: value,
       }),
-      fluidSpacingTop: fuildSpacingTop,
-      fluidSpacingBottom: fuildSpacingBottom,
+      fpt: makeFluidSpacing("paddingTop"),
+      fpr: makeFluidSpacing("paddingRight"),
+      fpb: makeFluidSpacing("paddingBottom"),
+      fpl: makeFluidSpacing("paddingLeft"),
+      fpx: makeFluidSpacing(["paddingLeft", "paddingRight"]),
+      fpy: makeFluidSpacing(["paddingTop", "paddingBottom"]),
+      fp: makeFluidSpacing("padding"),
       userSelect: (value: Stitches.PropertyValue<"userSelect">) => ({
         WebkitUserSelect: value,
         userSelect: value,
