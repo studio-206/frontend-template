@@ -1,20 +1,9 @@
-## Generic Nextjs template.
+## Studio 206 - Frontend Template
 
-- Typescript
+- Uses Next.js Typescript with App Router
+- Uses [Tailwind CSS](https://tailwindcss.com/)
 - Uses [husky](https://www.npmjs.com/package/husky) for easy git hooks. Runs a tsc and lint-staged pre-commit.
-  - If you need to bypass this for a WIP PR etc, run `git commit =m "your message" --no-verify`.
-- Uses [stitches](https://stitches.dev/) CSS-in-JS framework
-- Moves stuff to `./src/` directory so:
-
-```
-├── src
-|   ├── components/
-│   ├── pages/
-│   ├── styles/
-├── package.json
-```
-
-Includes a basic [stitches.dev](https://stitches.dev/) setup inside [src/styles/stitches.config.ts](src/styles/stitches.config.ts)
+  - If you need to bypass this for a WIP PR etc, run `git commit =m "your message" --no-verify`, or `-n` for short.
 
 ## How to use
 
@@ -22,36 +11,4 @@ Create a new repo by hitting [use this template](https://github.com/studio-206/n
 
 ## Guidelines
 
-We use `npm` as the package manager. No yarn.lock files allowed
-
-### Components
-
-When building a React component using stitches, we like to follow the following format:
-
-- Imports
-- Typescript Types
-- Named export & Component declaration
-- Styled Stitches variables
-
-Here's an example:
-
-```ts
-// import Link from "next/link" <- Ensure node_modules are imported first
-
-import { styled } from "src/styles/stitches.config";
-
-// Typescript Types
-interface Props {
-  onClick: () => void;
-}
-
-// export component as named function
-// This ensures we are importing the same thing.
-// This is so you don't do `import whoCares from "./ReallyImportantNamedFunctionThatActuallyCares"`
-export const Button = ({ onClick }: Props) => {
-  return <StyledButton onClick={onClick}>Click Me</StyledButton>;
-};
-
-// Styled elements
-const StyledButton = styled("button");
-```
+We use `npm` as the package manager.
