@@ -1,4 +1,4 @@
-![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/studio-206/frontend-template)
+[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/studio-206/frontend-template)](https://github.com/studio-206/frontend-template/releases/tag/2.0.0)
 
 ## Studio 206 - Frontend Template
 
