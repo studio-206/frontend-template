@@ -1,6 +1,6 @@
 {
-  "name": "nextjs-typescript-stitches-template",
-  "version": "1.5.0",
+  "name": "frontend-template",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,22 +10,26 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@stitches/react": "^1.2.8",
-    "next": "^13.1.1",
+    "autoprefixer": "10.4.15",
+    "clsx": "^2.0.0",
+    "next": "13.4.19",
+    "postcss": "8.4.29",
+    "prettier-plugin-organize-imports": "^3.2.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwindcss": "3.3.3"
   },
   "devDependencies": {
     "@types/node": "^17.0.35",
     "@types/react": "^18.0.9",
-    "@typescript-eslint/eslint-plugin": "^5.25.0",
-    "@typescript-eslint/parser": "^5.25.0",
-    "eslint": "^8.16.0",
-    "eslint-config-next": "^13.1.1",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.4.19",
     "husky": "^8.0.1",
-    "lint-staged": "^12.4.1",
-    "prettier": "2.7.1",
-    "typescript": "^4.6.4"
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3",
+    "typescript": "5.2.2"
   },
   "husky": {
     "hooks": {
@@ -35,12 +39,10 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --write",
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ],
     "*.{html,css}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   }
 }
