@@ -1,3 +1,5 @@
+![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/studio-206/frontend-template)
+
 ## Studio 206 - Frontend Template
 
 - Uses Next.js Typescript with App Router
